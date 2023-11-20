@@ -51,6 +51,7 @@ rigidbody.velocity = Vector3.forward * 10;
 // Add force
 rigidbody.AddForce(Vector3.up * 100);
 ```
+The code above will make the ball fly upwards.
 
 ## Force Modes
 
