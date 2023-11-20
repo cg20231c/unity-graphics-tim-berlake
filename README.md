@@ -68,9 +68,6 @@ There are four force modes available in Unity:
     This mode is very useful when you want to control the acceleration of an object independently of its mass.
 
     > For example, if you want to make two objects with different masses accelerate at the same rate, you would use Acceleration force mode. 
-    > This is because the force required to accelerate an object is directly proportional to its mass. 
-    > By specifying the acceleration directly, you ensure that both objects experience the same acceleration regardless of their mass.
-
 
     Example :
     ```bash
@@ -105,8 +102,39 @@ There are four force modes available in Unity:
     // Add force
     rigidbody.AddForce(Vector3.forward * 100);
     ```
-4. Force mode Impulse
-5. Force mode Velocity Change
+3. Force mode Impulse
+
+   This mode applies force suddenly. This force can be used to make the object move quickly or to change the direction of the object's movement.
+
+   Example :
+   ```bash
+   // Make a ball bounce when it hits the floor.
+
+    // Object initialization
+    GameObject ball = new GameObject("Ball");
+    Rigidbody rigidbody = ball.GetComponent<Rigidbody>();
+    // Set physical properties
+    rigidbody.mass = 1;
+    // Add impulse
+    rigidbody.AddImpulse(Vector3.down * 100f, ForceMode.Impulse);
+   ```
+   
+4. Force mode Velocity Change
+
+   This mode sets the speed of the object, which will cause it to accelerate or decelerate depending on the change in speed.
+
+   Example :
+   ```bash
+   // Make the ball stop when its velocity is changed to zero.
+
+    // Object initialization
+    GameObject ball = new GameObject("Ball");
+    Rigidbody rigidbody = ball.GetComponent<Rigidbody>();
+    // Set physical properties
+    rigidbody.mass = 1;
+    // Change velocity
+    rigidbody.velocity = Vector3.zero;
+   ```
 
 ## Physics Materials
 
