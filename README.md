@@ -9,10 +9,48 @@
 | 3   | Syukra Wahyu Ramadhan      | 5025211037   |
 
 ## Colliders
+A collider is a component that helps define the shape and size of an object's hitbox for the purposes of collision detection during gameplay. Unity offers various types of colliders to simulate different shapes and behaviors when objects interact. Here's a brief rundown of how to use colliders in Unity for basic physics interactions:
+
+### Adding Colliders to Game Objects:
+1. Selecting the GameObject: In Unity's Hierarchy or Scene view, select the GameObject to which you want to add a collider.
+2. Adding a Collider Component: In the Inspector panel, click "Add Component" and search for the collider type you want to add. Some of the common collider types are:<br>
+![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/78089862/275171b0-41a4-4c4a-8311-9948c42c92cb)
+
+   - Box Collider: Simulates a rectangular box shape.
+   - Sphere Collider: Simulates a spherical shape.
+   - Capsule Collider: Simulates a capsule shape.
+   - Mesh Collider: Uses an object's mesh for collision detection.
+   - Wheel Collider: is specifically designed for vehicle wheels and their interactions with the ground, simulating realistic driving behavior.
+   - Terrain Collider: is tailored for Unity's Terrain system, enabling GameObjects to interact with terrains in a physics-based manner.
+  
+3. Adjusting Collider Properties: Once added, you can adjust the collider's properties such as size, position, and orientation to fit your object accurately.<br>
+![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/78089862/ca826920-d62b-4847-9964-aa76d85a9060)
 
 ## Triggers
+Triggers are a way to detect when objects intersect or pass through a defined area without physically interacting or causing collisions. Triggers are commonly used to create gameplay events, detect when a player enters a specific area, activate/deactivate mechanisms, or initiate scripted actions.
+
+![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/78089862/987a8361-86c3-46fd-96b9-3930262b1aff)
+
+### Setting Up Triggers:
+1. Collider Component Setup: To create a trigger, attach a Collider component to a GameObject. This collider needs to have the "Is Trigger" checkbox enabled in the Inspector window. This setting tells Unity that this collider will act as a trigger rather than a physical collider.
+2. Rigidbody (Optional): If you want the GameObject with the trigger collider to detect triggers, ensure it has a Rigidbody attached. Rigidbodies are required for collision detection in Unity.
 
 ## Rigidbody
+A Rigidbody is a component that allows GameObjects to be affected by physics simulations. It enables objects to respond to forces like gravity, collisions, and applied forces, creating realistic movements and interactions within the game world.
+
+### Basics of Rigidbody:
+1. Adding a Rigidbody: To add a Rigidbody to a GameObject, select the GameObject in the Unity Editor and click "Add Component" in the Inspector window. Then search for and add the "Rigidbody" component.
+
+2. Properties:
+   
+   ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/78089862/4e034be0-8513-4593-9f3a-3c7f3098d43f)
+
+   - Mass: The mass of the object affects how it responds to forces. Heavier objects generally require more force to move.
+   - Drag and Angular Drag: These properties simulate air resistance and affect how quickly an object slows down.
+   - Use Gravity: Determines if the object is affected by gravity.
+   - Is Kinematic: When checked, the object is not affected by physics forces but can be moved programmatically.
+   - Interpolate: Smooths object movement between physics steps, reducing visual jitter.
+   - Collision Detection: Determine how accurately Unity detects collisions, influencing the reliability of collision interactions in the game.
 
 ## Scripting
 Scripting can be used to control the physical behavior of objects in the game.
