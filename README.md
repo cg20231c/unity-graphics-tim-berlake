@@ -136,8 +136,25 @@ There are four force modes available in Unity:
     rigidbody.velocity = Vector3.zero;
    ```
 
-## Physics Materials
+## Physics Material
+Controls how the frictions of surfaces interact with other surfaces.  Custom Materials can be applied to Physics Colliders.  You can specify the values for: Dynamic Friction, Static Friction, and Bounciness, as well as customize the parameters for: Friction Combine, and Bounce Combine.  To create a custom Physics Material, select from the top menu drop-down: Assets > Create > Physics Material, and add it to your GameObject by selecting the newly created Physic Material in the Project window, and dragging it to the GameObject’s Material property in the Inspector.  
+![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/537b38c2-7d40-4a9a-94d3-aee13919f9dd)
+In Physics Material you can set the dynamic friction, static friction, and bounciness
+  - Dynamic Friction is force that control the movespeed of an object
+  - Static Friction is a force that can prevent an object from sliding down a sloped surface.
+  - Bounciness is a variable that controll the bounciness of an object
 
-## Physics Joints
+## Joints
+A Joint Component connects a Rigidbody to another Rigidbody or a fixed point in space. Joints
+apply forces that move rigid bodies. Joint limits also can restrict certain movements.  The types of Physics Joints include Character Joint, Configurable Joint, Fixed Joint, Hinge Joint, and Spring Joint (
+  - Fixed Joint : Restricts the movement of a Rigidbody to follow the movement of the Rigidbody it is attached to. This is useful when you need Rigidbodies that easily break apart from each other, or you want to connect the movement of two Rigidbodies without parenting in a Transform hierarchy.
+    ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/434aba0f-c43b-4fb9-bdf5-ba07ce14b79b)
+  - Spring Joint : Keeps Rigidbodies apart from each other but lets the distance between them stretch slightly. The spring acts like a piece of elastic that tries to pull the two anchor points together to the exact same position.
+    ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/a7f6cb25-2f81-44f5-b035-170df45e049f)
+  - Hinge Joint: Attaches a Rigidbody to another Rigidbody or a point in space at a shared origin and allows the Rigidbodies to rotate around a specific axis from that origin. Useful for emulating doors and finger joints.
+    ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/11ecbf73-68fd-438e-a82e-78cc31be85e1)
+  - Character Joint Emulates a joint of a character, such as a hip or shoulder joint.  This constrains Rrigidbody movement along all linear degrees of freedom, and enables all angular freedoms. Rigidbodies attached to a Character Joint orient around each axis and pivot from a shared origin.
+    ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/a6967a0c-565a-458c-b563-ef3d3fe2b2a0)
+  - Configure Joint : Emulates any skeletal joint, such as the joints in a ragdoll. You can configure this joint to force and restrict Rigidbody movement in any degree of freedom.
+    ![image](https://github.com/cg20231c/unity-graphics-tim-berlake/assets/90988646/a523dbc2-4a41-4ece-a78b-3497f583b1fb)
 
-## Raycasting
