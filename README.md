@@ -56,8 +56,6 @@ The code above will make the ball fly upwards.
 
 ## Force Modes
 
-## About Updates
-
 ## Physics Materials
 
 ## Physics Joints
